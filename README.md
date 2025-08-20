@@ -1,69 +1,100 @@
-# React + TypeScript + Vite
+# 🌐 MutanTech - Proyecto Web Oficial
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenidos al repositorio de **MutanTech**, empresa de desarrollo de software.  
+Este proyecto está construido con **React** y organizado por ramas de features para cada colaborador.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Flujo de trabajo para colaboradores
 
-## Expanding the ESLint configuration
+👉 Importante: **Nadie trabaja en `main` ni en `develop` directamente**.  
+Cada colaborador tiene su propia rama (`feature/*`).  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 1️⃣ Clonar el repositorio
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/TU-USUARIO/MutanTech.git
+cd MutanTech
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 2️⃣ Cambiarse a su rama asignada
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Navbar** → `feature/navbar`  
+- **Servicios** → `feature/servicios`  
+- **Portafolio** → `feature/portafolio`  
+- **Footer** → `feature/footer`  
+- **Contacto** → `feature/contacto`  
+
+Ejemplo (si trabajas en Navbar):  
+
+```bash
+git checkout feature/navbar
 ```
+
+⚠️ Si no la tienes local, primero haz:  
+```bash
+git fetch origin
+git checkout feature/navbar
+```
+
+---
+
+### 3️⃣ Antes de empezar a trabajar
+
+Siempre actualiza tu rama:  
+
+```bash
+git pull origin feature/navbar
+```
+
+---
+
+### 4️⃣ Guardar cambios y subirlos
+
+```bash
+git add .
+git commit -m "Navbar: se agregó menú responsivo"
+git push origin feature/navbar
+```
+
+---
+
+### 5️⃣ Crear un Pull Request
+
+Cuando termines tu parte:  
+
+1. En GitHub → ve a la pestaña **Pull Requests**.  
+2. Haz clic en **New Pull Request**.  
+3. Selecciona tu rama (`feature/*`) → `develop`.  
+4. Escribe un título claro, ejemplo: `Navbar listo para revisión`.  
+
+---
+
+## ✅ Reglas básicas
+
+- Trabaja **solo en tu rama asignada**.  
+- Los **Pull Requests** siempre van hacia `develop`.  
+- Usa mensajes de commit claros:  
+  - ✔️ `Footer: se agregó redes sociales`  
+  - ✔️ `Contacto: formulario validado`  
+
+---
+
+## 📌 Estructura de ramas
+
+- `main` → Producción (estable)  
+- `develop` → Integración (testing interno)  
+- `feature/navbar` → Navbar  
+- `feature/servicios` → Servicios  
+- `feature/portafolio` → Portafolio  
+- `feature/footer` → Footer  
+- `feature/contacto` → Contacto  
+
+---
+
+👨‍💻 Equipo MutanTech  
+🚀 *Innovamos para transformar tu mundo digital*
